@@ -17,7 +17,7 @@ Points:
 steps: 
 
 1. git clone https://github.com/sps08/LivongoTest.git
-2. cd LivonoTest
+2. cd LivongoTest
 3. mvn clean test -DsuiteXmlFile=testng.xml
 
 
