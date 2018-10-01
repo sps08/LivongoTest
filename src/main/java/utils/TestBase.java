@@ -107,9 +107,9 @@ public class TestBase  {
 	}
 		 if (driver != null) {
 	          try {
-	        	// driver.close();
+	        	 driver.close();
 	          } finally {
-	             //driver.quit(); 
+	             driver.quit(); 
 	          }
 	        }    
 

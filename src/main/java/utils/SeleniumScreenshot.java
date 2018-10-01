@@ -36,7 +36,7 @@ public class SeleniumScreenshot {
 			File source = ts.getScreenshotAs(OutputType.FILE);
 			ssName = screenshotName+strDate+"_.png";
 			destination = System.getProperty("user.dir")+FrameworkConfig.getPropertyMap().get("ScreenShotFolder")+ssName;
-			System.out.println(destination);
+			//System.out.println(destination);
 			File finalDestination = new File(destination);
 			FileUtils.copyFile(source, finalDestination);
 		} catch (Exception e) {
