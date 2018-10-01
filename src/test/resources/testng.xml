@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LivongoTests" >
+	<test name = "LivongoHomeTest_Satinder" enabled="true">
+	
+		<classes>
+			<class  name ="testsuites.LivongoHomePageTests"/>
+		</classes>
+	</test>
+</suite>
