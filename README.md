@@ -21,4 +21,4 @@ steps:
 3. mvn clean test -DsuiteXmlFile=testng.xml
 
 
-Framework will generate the Extent report with Screenshots.
+Extent report will be generated with Screenshots.
