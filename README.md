@@ -17,7 +17,8 @@ Points:
 steps: 
 
 1. git clone https://github.com/sps08/LivongoTest.git
-2. mvn clean test -DsuiteXmlFile=testng.xml
+2. cd LivongoTest
+3. mvn clean test -DsuiteXmlFile=testng.xml
 
 
-Framework will generate the Extent report with Screenshots.
+Extent report will be generated with Screenshots.
