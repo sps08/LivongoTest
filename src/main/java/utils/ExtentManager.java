@@ -13,7 +13,7 @@ public class ExtentManager {
 	public static ExtentReports extent;
 	public static ExtentReports getInstance() {
 		if(extent==null) {
-			String reportpath = System.getProperty("user.dir")+FrameworkConfig.getPropertyMap().get("ReportPath");
+			String reportpath = System.getProperty("user.dir")+File.separator+FrameworkConfig.getPropertyMap().get("ReportPath");
 			//System.out.println(reportpath);
 			extent = new ExtentReports(reportpath);
 			try {
@@ -22,7 +22,7 @@ public class ExtentManager {
 			}catch( Exception e){
 				e.printStackTrace();
 			}
-			extent.loadConfig(new File(System.getProperty("user.dir")+"//extent-config.xml"));
+			extent.loadConfig(new File(System.getProperty("user.dir")+File.separator+"extent-config.xml"));
 		}
 		return extent;
 		

@@ -96,10 +96,11 @@ public class TestBase  {
 	@AfterSuite
 	public void teardown() throws IOException {
 	
+	
+	File resultfile = new File(System.getProperty("user.dir")+File.separator+FrameworkConfig.getPropertyMap().get("ReportPath"));
+	System.out.println(resultfile);
 	reports.flush();
 	reports.close();
-	File resultfile = new File(System.getProperty("user.dir")+FrameworkConfig.getPropertyMap().get("ReportPath"));
-	//System.out.println(resultfile);
 	try {
 		Desktop.getDesktop().browse(resultfile.toURI());
 	}catch(IOException e){
@@ -112,7 +113,6 @@ public class TestBase  {
 	             driver.quit(); 
 	          }
 	        }    
-
 	}
 
 	

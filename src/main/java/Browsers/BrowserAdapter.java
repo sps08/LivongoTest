@@ -1,5 +1,6 @@
 package Browsers;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -21,7 +22,7 @@ private WebDriver driver;
 			switch(browser) {
 			case "Chrome":
 			
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/"+FrameworkConfig.getPropertyMap().get("ChromeDriver"));
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ File.separator+FrameworkConfig.getPropertyMap().get("ChromeDriver"));
 				options = new ChromeOptions();
 			    options.addArguments("--disable-extensions");
 			    options.addArguments("--start-maximized");
@@ -30,7 +31,7 @@ private WebDriver driver;
 			break;
 				
 			case "IE":
-				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/"+ FrameworkConfig.getPropertyMap().get("IEDriver"));
+				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+File.separator+ FrameworkConfig.getPropertyMap().get("IEDriver"));
 				caps = DesiredCapabilities.internetExplorer();
 				
 				caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
@@ -42,7 +43,7 @@ private WebDriver driver;
 				break;
 				
 			default:
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ FrameworkConfig.getPropertyMap().get("ChromeDriver"));
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+ FrameworkConfig.getPropertyMap().get("ChromeDriver"));
 				options = new ChromeOptions();
 			    options.addArguments("--disable-extensions");
 			    options.addArguments("disable-infobars");
